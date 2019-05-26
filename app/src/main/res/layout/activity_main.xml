@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -26,32 +26,37 @@
 
     <ListView
         android:id="@+id/listview"
+        style="@style/CardView"
         android:layout_width="match_parent"
-        android:layout_height="431dp" />
+        android:layout_height="wrap_content"
+        android:divider="@android:drawable/divider_horizontal_textfield"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/thing"
-            android:layout_width="270dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <Button
             android:id="@+id/add"
+
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#A1D0D6"
-            android:onClick="addThingToDb"
             android:text="Add" />
     </LinearLayout>
-
-
 
 
 </LinearLayout>
